@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile{
+  id              Int             @default(autoincrement()) @id
+  name            String  
+  age             Int
+  gender          String
+  bio             String? 
+  email           String          @unique
+  matchesAsUser1  Match[]         @relation("User1Match")
+  matchesAsUser2  Match[]         @relation("User2Match")
+  profileMatches  Availability[]  @relation("UserAvailability")
+}
+model Match{
+  id              Int             @default(autoincrement()) @id
+  user1           Profile         @relation("User1Match", fields: [user1Id], references: [id], onDelete: Cascade)
+  user1Id         Int
+  user2           Profile         @relation("User2Match", fields: [user2Id], references: [id], onDelete: Cascade)
+  user2Id         Int
+  isMutal         Boolean         @default(false)
+  avaiMatch       Availability[]    @relation("MatchAvailability")
+}
+model Availability{
+  id              Int             @default(autoincrement()) @id
+  user            Profile         @relation("UserAvailability", fields: [userId], references: [id], onDelete: Cascade)
+  userId          Int
+  match           Match           @relation("MatchAvailability", fields: [matchId], references: [id], onDelete: Cascade)
+  matchId         Int             
+  fromDate        DateTime        @default(now())
+  toDate          DateTime        @default(now())
+}
