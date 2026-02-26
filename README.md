@@ -7,7 +7,8 @@
 <div align="center">
 
 ### 1️⃣ Tạo Profile & Chọn User
-![Create Profile](./docs/images/create-profile.png)
+<img width="1142" height="851" alt="image" src="https://github.com/user-attachments/assets/af35caa0-3f2f-4f3d-8cd4-94bc4b68c3ec" />
+
 *Tạo profile với thông tin cá nhân + User Selector để chuyển đổi người dùng*
 
 ```
@@ -30,7 +31,8 @@
 ---
 
 ### 2️⃣ Browse & Like Profiles
-![Profile List](./docs/images/profile-list.png)
+<img width="1064" height="614" alt="image" src="https://github.com/user-attachments/assets/603f9f4d-34f3-416a-b35a-3f385a256f9c" />
+
 *Duyệt danh sách profiles và gửi like*
 
 ```
@@ -47,7 +49,8 @@
 ---
 
 ### 3️⃣ Match Success!
-![Matches](./docs/images/matches.png)
+<img width="1065" height="704" alt="image" src="https://github.com/user-attachments/assets/5fb7e0c2-8ada-4253-bc48-8c1c8ddce061" />
+
 *Hiển thị các match thành công với thông báo "It's a Match!"*
 
 ```
@@ -69,7 +72,8 @@
 ---
 
 ### 4️⃣ Schedule Date - Chọn Lịch Rảnh
-![Availability](./docs/images/availability.png)
+<img width="1026" height="628" alt="image" src="https://github.com/user-attachments/assets/b1f7f47a-3431-409a-b2ca-a8efc343b6fa" />
+
 *Submit availability và check common time slots*
 
 ```
@@ -90,7 +94,8 @@
 ---
 
 ### 5️⃣ Match Result - Tìm Thấy Slot Trùng!
-![Date Scheduled](./docs/images/date-result.png)
+<img width="1089" height="754" alt="image" src="https://github.com/user-attachments/assets/f1a1a262-9a7f-45f2-bd5d-9b0b9b25662e" />
+
 *Kết quả sau khi check: có hoặc không có thời gian chung*
 
 **✅ Success Case:**
@@ -104,6 +109,7 @@
 │                                          │
 └─────────────────────────────────────────┘
 ```
+<img width="1026" height="727" alt="image" src="https://github.com/user-attachments/assets/4c965225-0558-46d1-8351-1e0489e0165b" />
 
 **❌ No Overlap Case:**
 ```
